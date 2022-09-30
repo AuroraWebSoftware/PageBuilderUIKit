@@ -1,0 +1,39 @@
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+
+<div class="pagebuilder-content-type pagebuilder-image type-nested" event="{ mouseover: onMouseOver, mouseout: onMouseOut }, mouseoverBubble: false">
+    <render args="getOptions().template" ></render>
+    <figure attr="data.main.attributes" ko-style="Object.assign({}, data.main.style(), !data.desktop_image.attributes().src ? {} : {borderStyle: 'none'})" css="data.main.css">
+        <scope args="getUploader().getUiComponent()">
+            <render ></render>
+        </scope>
+        <img if="getViewportImageData().attributes().src"
+             attr="getViewportImageData().attributes"
+             class="preview-image"
+             css="getViewportImageData().css"
+             ko-style="getViewportImageData().style" />
+        <!-- ko if: data.caption.html() -->
+        <!-- ko with: data.caption -->
+        <!-- ko with: {attributes: attributes, css: css, dataCaptionUnsanitizedHtml: html, style: style} -->
+        <figcaption attr="attributes"
+                    css="css"
+                    html="dataCaptionUnsanitizedHtml"
+                    ko-style="style">
+        </figcaption>
+        <!-- /ko -->
+        <!-- /ko -->
+        <!-- /ko -->
+    </figure>
+</div>
+<div class="pagebuilder-content-type pagebuilder-products" data-bind="event: { mouseover: onMouseOver, mouseout: onMouseOut }, mouseoverBubble: false">
+    <div attr="data.main.attributes" ko-style="data.main.style" css="data.main.css">
+        <div if="displayPreview" class="rendered-content" html="widgetUnsanitizedHtml" afterRender="onAfterRender"></div>
+        <div ifnot="displayPreview" class="pagebuilder-products-placeholder">
+            <span class="placeholder-text" text="placeholderText"></span>
+        </div>
+    </div>
+</div>
