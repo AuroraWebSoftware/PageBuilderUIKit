@@ -225,7 +225,6 @@ define(["jquery", "knockout", "mage/translate", "Magento_PageBuilder/js/events",
         };
 
         _proto.initSlider = function initSlider() {
-            console.log(this.appearance() );
             if (this.element && this.appearance() === "carousel") {
                 (0, _jquery)(this.element.children).slick(this.buildSlickConfig());
             }
