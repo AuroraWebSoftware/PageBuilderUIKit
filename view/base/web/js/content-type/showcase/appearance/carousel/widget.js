@@ -40,7 +40,7 @@ define([
      */
     function initSlider($element, slickConfig, breakpoint) {
         var productCount = $element.find('.product-item').length,
-            $carouselElement = $($element.children()),
+            $carouselElement = $($element.children().children()),
             centerModeClass = 'center-mode',
             carouselMode = $element.data('carousel-mode'),
             slidesToShow = breakpoint.options.products[carouselMode] ?
