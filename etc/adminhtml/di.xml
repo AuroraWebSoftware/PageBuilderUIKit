@@ -5,13 +5,6 @@
             <argument name="optionsSize" xsi:type="string">large</argument>
             <argument name="optionsData" xsi:type="array">
                 <item name="0" xsi:type="array">
-                    <item name="value" xsi:type="string">default</item>
-                    <item name="title" xsi:type="string" translate="true">Default</item>
-                </item>
-            </argument>
-            <argument name="optionsSize" xsi:type="string">large</argument>
-            <argument name="optionsData" xsi:type="array">
-                <item name="0" xsi:type="array">
                     <item name="value" xsi:type="string">grid</item>
                     <item name="title" xsi:type="string" translate="true">Product Grid</item>
                     <item name="icon" xsi:type="string">Magento_PageBuilder::css/images/content-type/products/appearance/grid.svg</item>
