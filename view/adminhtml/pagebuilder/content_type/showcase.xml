@@ -30,7 +30,7 @@
                         <attribute source="data-content-type" name="name"/>
                         <attribute source="data-appearance" name="appearance"/>
                         <html name="html" preview_converter="Magento_PageBuilder/js/converter/attribute/preview/store-id"/>
-                        <css name="css_classes"/>
+                        <css name="css_classes" />
                     </element>
                     <element name="desktop_image">
                         <style name="border" source="border_style" converter="Magento_PageBuilder/js/converter/style/border-style"/>
@@ -97,15 +97,17 @@
                         <style name="padding" storage_key="margins_and_padding" reader="Magento_PageBuilder/js/property/paddings" converter="Magento_PageBuilder/js/converter/style/paddings"/>
                         <attribute name="name" source="data-content-type"/>
                         <attribute name="appearance" source="data-appearance"/>
+                        <static_attribute source="data-center-padding" value="90px"/>
+                        <html name="html" preview_converter="Magento_PageBuilder/js/converter/attribute/preview/store-id"/>
+                        <css name="css_classes"/>
+                    </element>
+                    <element name="carousel">
                         <attribute name="autoplay" source="data-autoplay"/>
                         <attribute name="autoplay_speed" source="data-autoplay-speed"/>
                         <attribute name="is_infinite" source="data-infinite-loop"/>
                         <attribute name="show_arrows" source="data-show-arrows"/>
                         <attribute name="show_dots" source="data-show-dots"/>
                         <attribute name="carousel_mode" source="data-carousel-mode"/>
-                        <static_attribute source="data-center-padding" value="90px"/>
-                        <html name="html" preview_converter="Magento_PageBuilder/js/converter/attribute/preview/store-id"/>
-                        <css name="css_classes"/>
                     </element>
                     <element name="desktop_image">
                         <style name="border" source="border_style" converter="Magento_PageBuilder/js/converter/style/border-style"/>
