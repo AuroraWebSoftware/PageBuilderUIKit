@@ -4,6 +4,6 @@ use Magento\Framework\Component\ComponentRegistrar;
 
 ComponentRegistrar::register(
     ComponentRegistrar::MODULE,
-    'Aurora_PageBuilderUIKit',
+    'AuroraWebSoftware_PageBuilderUIKit',
     __DIR__
 );
