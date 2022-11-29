@@ -40,9 +40,9 @@ define([
      */
     function initSlider($element, slickConfig, breakpoint) {
         var productCount = $element.find('.product-item').length,
-            $carouselElement = $($element.find(".widget-product-carousel")),
+            $carouselElement = $($element.find(".showcase-products")),
             centerModeClass = 'center-mode',
-            carouselMode = $element.data('carousel-mode'),
+            carouselMode = $carouselElement.data('carousel-mode'),
             slidesToShow = breakpoint.options.products[carouselMode] ?
                 breakpoint.options.products[carouselMode].slidesToShow :
                 breakpoint.options.products.default.slidesToShow;
@@ -50,27 +50,27 @@ define([
         slickConfig.slidesToShow = parseFloat(slidesToShow);
 
         if (carouselMode === 'continuous' && productCount > slickConfig.slidesToShow) {
-            $element.addClass(centerModeClass);
+            $carouselElement.addClass(centerModeClass);
             slickConfig.centerPadding = $element.data('center-padding');
             slickConfig.centerMode = true;
         } else {
-            $element.removeClass(centerModeClass);
-            slickConfig.infinite = $element.data('infinite-loop');
+            $carouselElement.removeClass(centerModeClass);
+            slickConfig.infinite = $carouselElement.data('infinite-loop');
         }
 
-        buildSlick($carouselElement, slickConfig);
+        buildSlick($carouselElement.find(".widget-product-carousel"), slickConfig);
     }
 
     return function (config, element) {
         var $element = $(element),
-            $carouselElement = $($element.children()),
+            $carouselElement = $($element.find(".showcase-products")),
             currentViewport = config.currentViewport,
             currentBreakpoint = config.breakpoints[currentViewport],
             slickConfig = {
-                autoplay: $element.data('autoplay'),
-                autoplaySpeed: $element.data('autoplay-speed') || 0,
-                arrows: $element.data('show-arrows'),
-                dots: $element.data('show-dots')
+                autoplay: $carouselElement.data('autoplay'),
+                autoplaySpeed: $carouselElement.data('autoplay-speed') || 0,
+                arrows: $carouselElement.data('show-arrows'),
+                dots: $carouselElement.data('show-dots')
             };
 
         _.each(config.breakpoints, function (breakpoint) {

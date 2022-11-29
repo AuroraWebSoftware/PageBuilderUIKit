@@ -29,6 +29,10 @@
                     <item name="value" xsi:type="string">continuous</item>
                     <item name="title" xsi:type="string" translate="true">Continuous</item>
                 </item>
+                <item name="2" xsi:type="array">
+                    <item name="value" xsi:type="string">showcase</item>
+                    <item name="title" xsi:type="string" translate="true">Showcase</item>
+                </item>
             </argument>
         </arguments>
     </virtualType>

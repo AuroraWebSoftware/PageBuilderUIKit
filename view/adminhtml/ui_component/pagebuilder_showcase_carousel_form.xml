@@ -88,7 +88,7 @@
         <field name="carousel_mode" sortOrder="10" formElement="select" component="Magento_PageBuilder/js/form/element/visual-select">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
-                    <item name="default" xsi:type="string">default</item>
+                    <item name="showcase" xsi:type="string">showcase</item>
                 </item>
             </argument>
             <settings>
