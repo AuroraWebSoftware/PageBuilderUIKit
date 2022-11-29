@@ -134,3 +134,22 @@
         }
     }
 }
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    [data-content-type='showcase'] .showcase-body {
+        margin: 0;
+
+        .showcase-image {
+            display: none;
+        }
+
+        .showcase-products {
+            padding: 0;
+            width: 100%;
+        }
+    }
+}
