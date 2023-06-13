@@ -62,6 +62,7 @@
                         <attribute name="title_attribute" source="title"/>
                     </element>
                     <element name="empty_link"/>
+                    <element name="carousel"/>
                     <element name="caption">
                         <html name="image_caption" converter="Magento_PageBuilder/js/converter/html/tag-escaper"/>
                     </element>
