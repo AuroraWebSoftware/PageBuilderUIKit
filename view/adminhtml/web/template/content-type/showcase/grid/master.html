@@ -5,8 +5,7 @@
  */
 -->
 
-<div class="showcase" attr="data.main.attributes">
-
+<div class="showcase" attr="data.main.attributes" ko-style="data.main.style" css="data.main.css">
     <div class="showcase-header">
         <h2 if="data.caption.html()"
             attr="data.caption.attributes"
@@ -19,10 +18,8 @@
            ko-style="data.link.style"
            css="data.link.css">Tüm Ürünler</a>
     </div>
-
     <div class="showcase-body">
-        <figure ko-style="Object.assign({}, data.main.style(), !data.desktop_image.attributes().src ? {} : {borderStyle: 'none'})" class="showcase-image" css="data.main.css">
-
+        <figure class="showcase-image">
             <a if="data.link.attributes().href" attr="data.link.attributes" ko-style="data.link.style" css="data.link.css">
                 <img if="data.desktop_image.attributes().src"
                      attr="data.desktop_image.attributes"
@@ -35,7 +32,6 @@
                      css="data.mobile_image.css"
                      ko-style="data.mobile_image.style" />
             </a>
-
             <ifnot args="data.link.attributes().href">
                 <img if="data.desktop_image.attributes().src"
                      attr="data.desktop_image.attributes"
@@ -48,9 +44,7 @@
                      css="data.mobile_image.css"
                      ko-style="data.mobile_image.style" />
             </ifnot>
-
         </figure>
-
-        <div attr="data.carousel.attributes" data-bind="html: data.main.html" ko-style="data.main.style" class="showcase-products" css="data.main.css"></div>
+        <div attr="data.carousel.attributes" data-bind="html: data.main.html" class="showcase-products"></div>
     </div>
 </div>

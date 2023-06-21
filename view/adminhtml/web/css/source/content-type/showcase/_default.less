@@ -7,8 +7,32 @@
 //  Default appearance styles
 //  _____________________________________________
 
-.pagebuilder-image {
-    width: 100%;
+
+.pagebuilder-showcase {
+    display: flex;
+    flex-wrap: wrap;
+
+    .pagebuilder-heading {
+        width: 100%;
+    }
+
+    .pagebuilder-image {
+        width: 30%;
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
+    }
+
+    .pagebuilder-products {
+        width: 70%;
+    }
+}
+
+.icon-pagebuilder-showcase {
+    content: url('@{baseDir}AuroraWebSoftware_PageBuilderUIKit/css/images/content-type/showcase/appearance/showcase-icon.svg');
+    width: 18px;
+    height: 18px;
+    margin-bottom: -1px;
 }
 
 .pagebuilder-content-type [data-content-type='image'] {
@@ -27,11 +51,6 @@
         span {
             color: @color-gray65-lighten;
         }
-    }
-
-    figcaption {
-        padding: 15px 0;
-        word-wrap: break-word;
     }
 
     .preview-image,
@@ -397,11 +416,4 @@
             }
         }
     }
-}
-
-.icon-pagebuilder-showcase {
-    content: url('@{baseDir}AuroraWebSoftware_PageBuilderUIKit/css/images/content-type/showcase/appearance/showcase-icon.svg');
-    width: 18px;
-    height: 18px;
-    margin-bottom: -1px;
 }
