@@ -152,9 +152,11 @@
                     <item name="default" xsi:type="string">false</item>
                     <item name="disabledValues" xsi:type="array">
                         <item name="none" xsi:type="string">continuous</item>
+                        <item name="none_showcase" xsi:type="string">showcase</item>
                     </item>
                     <item name="dependentValues" xsi:type="array">
                         <item name="continuous" xsi:type="string">true</item>
+                        <item name="showcase" xsi:type="string">false</item>
                     </item>
                 </item>
             </argument>
@@ -182,11 +184,21 @@
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="default" xsi:type="string">false</item>
+                    <item name="disabledValues" xsi:type="array">
+                        <item name="none" xsi:type="string">showcase</item>
+                    </item>
+                    <item name="dependentValues" xsi:type="array">
+                        <item name="showcase" xsi:type="string">true</item>
+                    </item>
                 </item>
             </argument>
             <settings>
                 <dataType>boolean</dataType>
                 <label translate="true">Show Arrows</label>
+                <imports>
+                    <link name="setDisabled">ns = ${ $.ns }, index = carousel_mode:value</link>
+                    <link name="setDependentValues">ns = ${ $.ns }, index = carousel_mode:value</link>
+                </imports>
             </settings>
             <formElements>
                 <checkbox>
