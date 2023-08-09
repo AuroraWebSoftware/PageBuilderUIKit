@@ -140,16 +140,26 @@
 //  _____________________________________________
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
-    [data-content-type='showcase'] .showcase-body {
-        margin: 0;
+    [data-content-type='showcase'] {
 
-        .showcase-image {
-            display: none;
+        > .action.primary {
+            margin-top: @indent__xs + @indent__s;
+            padding: @indent__s (@indent__xs + @indent__s);
+            text-align: center;
+            width: 100%;
         }
 
-        .showcase-products {
-            padding: 0;
-            width: 100%;
+        .showcase-body {
+            margin: 0;
+
+            .showcase-image {
+                display: none;
+            }
+
+            .showcase-products {
+                padding: 0;
+                width: 100%;
+            }
         }
     }
 }

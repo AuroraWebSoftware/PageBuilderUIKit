@@ -16,6 +16,7 @@
         <a if="data.link.attributes().href"
            attr="data.link.attributes"
            ko-style="data.link.style"
+           class="abs-visually-hidden-mobile-m"
            css="data.link.css">Tüm Ürünler</a>
     </div>
     <div class="showcase-body">
@@ -47,4 +48,9 @@
         </figure>
         <div attr="data.carousel.attributes" data-bind="html: data.main.html" class="showcase-products"></div>
     </div>
+    <a if="data.link.attributes().href"
+       attr="data.link.attributes"
+       ko-style="data.link.style"
+       class="action primary transparent abs-visually-hidden-desktop-s"
+       css="data.link.css">Tüm Ürünler</a>
 </div>
