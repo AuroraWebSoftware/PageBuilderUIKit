@@ -70,7 +70,8 @@ define([
                 autoplay: $carouselElement.data('autoplay'),
                 autoplaySpeed: $carouselElement.data('autoplay-speed') || 0,
                 arrows: $carouselElement.data('show-arrows'),
-                dots: $carouselElement.data('show-dots')
+                dots: $carouselElement.data('show-dots'),
+                lazy: 'ondemand'
             };
 
         _.each(config.breakpoints, function (breakpoint) {
