@@ -1,5 +1,6 @@
 {
     "name": "aurorawebsoftware/pagebuilderuikit",
+    "type": "magento2-module",
     "version": "1.0.0",
     "description": "Page Builder content type for PageBuilderUIKit.",
     "homepage": "https://github.com/AuroraWebSoftware/PageBuilderUIKit",
@@ -12,14 +13,15 @@
         }
     ],
     "require": {
-        "magento/framework": "*",
-        "magento/module-page-builder": "*",
-        "php": "~7.3.0||~7.4.0"
+        "magento/framework": "~103.0.5",
+        "magento/module-page-builder": "~2.2.3",
+        "php": "~7.4.0||~8.1.0"
     },
-    "type": "magento2-module",
     "autoload": {
         "files": [
             "registration.php"
         ]
-    }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
 }
