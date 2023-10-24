@@ -1,7 +1,6 @@
 {
     "name": "aurorawebsoftware/pagebuilderuikit",
     "type": "magento2-module",
-    "version": "1.0.0",
     "description": "Page Builder content type for PageBuilderUIKit.",
     "homepage": "https://github.com/AuroraWebSoftware/PageBuilderUIKit",
     "license": "MIT",
